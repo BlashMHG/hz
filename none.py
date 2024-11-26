@@ -1,7 +1,5 @@
-from multiprocessing.connection import answer_challenge
-
 name = input("Введите ваше имя: ")
-print("здравсвтвуйте, " .upper(), name)
+print("здравсвтвуйте, ", name)
 print('Как ваши дела? Хорошо/Плохо: ') #не знаю, да и не искал пока команды про заглавные буквы
 answer = input()
 if answer =='Хорошо':
@@ -11,9 +9,11 @@ else:
 age = input('А в каком году вы родились?: ')
 year = 2024
 now_age =  year - int(age)
-if now_age <18:
+if now_age < 18:
     print('Извините, программа строго 18+')
-if now_age <25:
+elif now_age < 25:
     print('Ну давай бро, делай дела дальше')
-else:
+elif now_age > 25 and now age < 60:
     print('Добро пожаловать в улуб Скуфов! Хе-хе')
+else:
+    print('Да ты пыль, дружок...')
