@@ -23,7 +23,7 @@ def key():
         print("""   Введенное число не подходит
    Пожалуйста, следуйте условиям ввода""")
     else:
-        input_list = list(range(1, input_)) 
+        input_list = list(range(1, input_))
     answer = []
     for i in input_list:
         for j in input_list:
@@ -50,14 +50,16 @@ def bank():
     
 def square():
     side = int(input("Введите сторону квадрата - "))
-    side_pl = side ** 2 
-    side_d = side * 2 ** 0.5
-    side_p = side * 4
+    side_pl = side ** 2.  #pl площадь
+    side_d = side * 2 ** 0.5   #d диагональ
+    side_p = side * 4   #p периметр
     side_tuple = (f"""{side_p} - Периметр
 {side_pl} Площадь
 {side_d:.1f} Диагональ""")
     print(side_tuple)
     
+#моюно было написать этот код без функций, просто через if, elif, else. но решил отработать функции
+
 if input_main == 3:
     bank()
 elif input_main == 2:
