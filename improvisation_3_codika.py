@@ -2,6 +2,7 @@ input_main = int(input("""Здравствуйте! выберите одну и
 1. Вычисление второго максимального числа из введенных вами
 2. Задача древний шифр
 3. Узнать конечную сумму вклада
+4. Периметр, Плошадь и Диагональ каадрата по его стороне
 Выберите цифру нужной программы:  
 """))
 def maximum():
@@ -46,12 +47,24 @@ def bank():
         x = int(100 * x) / 100
         year += 1
     print("Через", year, "лет, сумма вклада достигнет", y)
-
+    
+def square():
+    side = int(input("Введите сторону квадрата - "))
+    side_pl = side ** 2 
+    side_d = side * 2 ** 0.5
+    side_p = side * 4
+    side_tuple = (f"""{side_p} - Периметр
+{side_pl} Площадь
+{side_d:.1f} Диагональ""")
+    print(side_tuple)
+    
 if input_main == 3:
     bank()
 elif input_main == 2:
     key()
 elif input_main == 1:
     maximum()
+elif input_main == 4:
+    square()
 else:
     print("Такой программы нет")
